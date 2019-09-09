@@ -86,7 +86,7 @@ func MaskNumber2Mask(mask int) uint32 {
 
 func GetSubSlice(b []byte, bgn, end int) []byte {
 	lb := len(b)
-	if bgn >= lb || bgn >= end {
+	if bgn >= lb || bgn >= end || bgn < 0 {
 		return []byte{}
 	}
 	if end > lb {
